@@ -1,5 +1,6 @@
 export const initialTeam = ["ömer", "emre", "gökhan", "enis"];
 
+
 export const initialTasks = [
   {
     id: 1,

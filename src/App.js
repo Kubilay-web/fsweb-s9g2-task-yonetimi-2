@@ -7,6 +7,7 @@ import { initialTasks, initialTeam } from "./data";
 import { toast } from 'react-toastify';
 
 
+
 function App() {
   const [tasks, setTasks] = useState(initialTasks);
   const [team, setTeam] = useState(initialTeam);
@@ -29,21 +30,21 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <div className="formColumn">
-        <div className="form-container">
+    <div className="h-screen flex">
+       <div className="bg-white flex-shrink-0 w-360 border-r-2 border-f3d4b0 overflow-auto">
+       <div className="p-8 pb-6 border-b-2 border-ddd">
           <h2>Yeni Task</h2>
           <TaskHookForm kisiler={team} submitFn={handleTaskSubmit} />
         </div>
 
-        <div className="form-container">
+        <div className="p-8 pb-6 border-b-2 border-ddd">
           <h2>Yeni Kişi</h2>
           <PeopleForm kisiler={team} submitFn={handlePeopleSubmit} />
         </div>
       </div>
-      <div className="columns">
-        <div className="column">
-          <h2 className="column-title">Yapılacaklar</h2>
+      <div className="flex justify-center flex-wrap p-8 gap-8 overflow-auto">
+        <div className="flex-1 min-w-240 max-w-360">
+          <h2 className="text-2xl pl-3">Yapılacaklar</h2>
           <div className="column-list">
             {tasks
               .filter((t) => t.status === "yapılacak")
@@ -52,8 +53,8 @@ function App() {
               ))}
           </div>
         </div>
-        <div className="column">
-          <h2 className="column-title">Tamamlananlar</h2>
+        <div className="flex-1 min-w-240 max-w-360">
+          <h2 className="text-2xl pl-3">Tamamlananlar</h2>
           <div className="column-list">
             {tasks
               .filter((t) => t.status === "yapıldı")

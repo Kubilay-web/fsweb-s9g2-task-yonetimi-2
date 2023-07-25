@@ -1,36 +1,38 @@
 /* LAYOUT */
-.app {
+
+
+  /* .app {
   height: 100vh;
   display: flex;
-}
+}  */
 
-.columns {
-  flex: 1;
+/* .columns {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   padding: 2rem 2rem 1.5rem;
   gap: 2rem;
   overflow: auto;
-}
+} */
 
-.column {
+/* .column {
   flex: 1;
   min-width: 240px;
   max-width: 360px;
-}
+} */
 
-.formColumn {
+/* .formColumn {
   background-color: #fff;
   flex: 0 0 360px;
   border-right: 1px solid #f3d4b0;
   overflow: auto;
-}
+} */
 
-.column-title {
+/* .column-title {
   font-size: 1.5rem;
   padding-left: 0.75rem;
-}
+} */
+
 /* LAYOUT */
 
 /* TASK */
@@ -89,9 +91,11 @@
 .normal {
   background-color: #ffd9d4;
 }
+
 .urgent {
   background-color: #d4d7ff;
 }
+
 /* TASK */
 
 /* FORM */
@@ -161,4 +165,9 @@
   cursor: not-allowed;
   box-shadow: none;
 }
+
 /* FORM */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
